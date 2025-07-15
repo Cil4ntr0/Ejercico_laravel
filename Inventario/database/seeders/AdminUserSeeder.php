@@ -12,13 +12,14 @@ class AdminUserSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run()
+    public function run(): void
     {
-        user::create([
-            'name' => 'Admin',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('Admin1234'),
-            'role'=> 'admin',
-        ]);
+     user::create([
+        'name'=> 'Admin',
+        'email'=>'admin@example.com',
+        'password'=> Hash::make('Admin1234'),
+        'role'=>'admin',
+     ]);
+        //
     }
 }
