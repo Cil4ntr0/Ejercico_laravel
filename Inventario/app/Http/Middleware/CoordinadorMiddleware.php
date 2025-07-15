@@ -15,6 +15,10 @@ class CoordinadorMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if(auth()->check() && auth()->user()->role !== 'coordinador') {
+            return $next($request);
+        }
+        abort(403, 'No tienes permisos de coordinador');
     }
-}
+};
+
