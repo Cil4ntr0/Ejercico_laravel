@@ -52,10 +52,10 @@ class CategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+   public function edit(string $id)
     {
-        $categoria = Categoria::findOrFail($id);
-        return view('categorias.edit', compact('categoria'));
+        $categoria = \App\Models\Categoria::findOrFail($id);
+        return view('categorias.editar', compact('categoria'));
     }
 
     /**
