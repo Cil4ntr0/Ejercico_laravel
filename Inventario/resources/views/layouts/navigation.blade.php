@@ -14,10 +14,21 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
-                            <a href="{{route('categorias.index')}}">Categorias</a>
-                            <a href="{{route('subcategorias.index')}}">Subcategorias</a>
-                            <a href="{{route('productos.index')}}">Productos</a>
-                            <a href="{{route('usuarios.index')}}">Usuarios</a>
+                    </x-nav-link>
+                     <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index')">
+                        {{ __('Categorias') }}
+
+                    </x-nav-link>
+                     <x-nav-link :href="route('subcategorias.index')" :active="request()->routeIs('subcategorias.index')">
+                        {{ __('Subcategorias') }}
+
+                    </x-nav-link>
+                     <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+                        {{ __('Productos') }}
+                     </x-nav-link>
+                     <x-nav-link :href="route('usuarios.index')" :active="request()->routeIs('usuarios.index')">
+                        {{ __('Usuarios') }}
+
                     </x-nav-link>
                 </div>
             </div>

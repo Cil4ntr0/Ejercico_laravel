@@ -11,7 +11,8 @@ class SubcategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $subcategorias = Subcategoria::all();
+        return view('subcategorias.index', compact('subcategorias'));
     }
 
     /**
@@ -19,7 +20,7 @@ class SubcategoriaController extends Controller
      */
     public function create()
     {
-        //
+       return view('subcategorias.create');
     }
 
     /**
